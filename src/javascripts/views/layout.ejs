@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <base href="/"> -->
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <title>Around The World</title>
+</head>
+
+<body>
+  
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">
+        <% if (locals.header === undefined || header) { %>
+          <%- include("partials/_header") %>
+        <% } %>  
+        </span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <%- include("partials/_nav") %>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+    <% if (content) { %>
+      <%- include(content) %>
+    <% } else { %>
+      <p>Nothing to display</p>
+    <% } %>
+
+    </div>
+
+    <%- include("partials/_footer") %>
+
+  <script src="/javascripts/main.js"></script>
+</body>
+ 
+</html>

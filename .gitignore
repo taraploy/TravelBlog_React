@@ -1,6 +1,10 @@
 # compiled output
 dist/*
 !dist/.keep
+#
+public/*
+!public/.keep
+#
 /tmp
 /out-tsc
 
