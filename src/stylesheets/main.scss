@@ -1,7 +1,192 @@
 // Your styles go here
 
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;600&display=swap');
+
+$editBtn: #9a8194;
+$deleteBtn: #630000;
+$homeBtn: #9a8194;
+$destinationBtn: #9a8194;
+$submitBtn: #9a8194;
+$cancelBtn: #9a8194;
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
 body {
+    background-color: #fafafa;
     overflow: auto;
+    font-family: 'Antonio', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+header, footer {
+    margin: 20px 0;
+}
+
+.home-layout {
+    margin: 0 25px;
+}
+
+nav {
+    display: flex;
+    ul {
+        display: flex;
+
+        &:first-child {
+            flex: 1;
+        }
+    }
+}
+
+img {
+    width: 320px;
+    height: 200px;
+}
+
+#_log_user_out:hover {
+    cursor: pointer;
+}
+
+.country-title {
+    margin-top: 20px;
+}
+
+.country-img {
+    display: block;
+    margin: 15px auto;
+    width: 600px;
+    height: 375px;
+}
+
+.country-table {
+    margin-bottom: 13px;
+
+    & td {
+    padding-right: 35px;
+    // margin: 0 auto;
+    }
+}
+
+
+
+.hr-travel {
+    width: 20%;
+}
+
+.sortBox {
+    vertical-align: middle;
+}
+
+.card-link, .card-link:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.card {
+    // display: inline;
+    align-items: center;
+    width: 30%;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin: 10px;
+}
+
+select {
+    margin-top: 9px;
+    margin-right: 10px;
+    width: 150px;
+    height: 43px;
+    padding: 5px;
+}
+
+.btn {
+    margin-right: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding: 10px;
+}
+
+.login-header, .register-header, .add-edit-header {
+    margin-top: 30px;
+}
+
+.loginForm, .registerForm, .travelForm {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.login-btn, .register-btn {
+    background-color: $editBtn;
+    border: none;
+    margin: 0 auto;
+    width: 100%;
+    &:hover {
+        background-color: $editBtn;
+    }
+}
+
+.editBtn {
+    background-color: $editBtn;
+    border: none;
+    width: 150px;
+    &:hover {
+        background-color: $editBtn;
+    }
+}
+
+.deleteBtn {
+    background-color: $deleteBtn;
+    border: none;
+    width: 150px;
+    &:hover {
+        background-color: $deleteBtn;
+    }
+}
+
+.homeBtn {
+    text-align: center;
+    background-color: $homeBtn;
+    border: none;
+    width: 150px;
+    &:hover {
+        background-color: $homeBtn;
+    }
+}
+
+.destinationBtn {
+    background-color: $destinationBtn;
+    border: none;
+    width: 250px;
+    &:hover {
+        background-color: $destinationBtn;
+    }
+}
+
+.submitBtn {
+    background-color: $submitBtn;
+    border: none;
+    width: 215px;
+    &:hover {
+        background-color: $submitBtn;
+    }
+}
+
+.cancelBtn {
+    background-color: $cancelBtn;
+    border: none;
+    width: 215px;
+    &:hover {
+        background-color: $cancelBtn;
+    }
+}
+
+.navMenu {
+    background-color: $cancelBtn;
 }

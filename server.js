@@ -35,11 +35,11 @@ configureRoutes(app)
 
 // Handling errors
 app.use(function(req, res, next) {  // request, response, next
-    res.render('layout', { content: 'error', err: createError(404), title: "Around The World"})
+    res.render('layout', { content: 'error', err: createError(404), title: "AROUND THE WORLD"})
 })
 app.use(function(err, req, res, next) {     // error, request, response, next
     res.status(err.status || 500)
-    res.render('layout', { content: 'error', err: err, title: "Around The World"})
+    res.render('layout', { content: 'error', err: err, title: "AROUND THE WORLD"})
 })
 
 // Create the web server

@@ -20,16 +20,20 @@ export const registerUserAPI = (req, res, next) => {
 }
 
 export const logUserInAPI = (req, res, next) => {
+    console.log("before authenticate")
     passport.authenticate("local", (err, user, info) => {
         if (err) {
           res.status(404).json(err)
           res.end()
         } else {
+          console.log("user" + user)
           if (user) {
+            console.log("if user")
             let token = user.generateJWT()
-            res.cookie("token", token, { maxAge: 1000 * 60 /*60 * 24*/ })
+            res.cookie("token", token, { maxAge: 1000 * 60 * 60 /* 24*/ })
             res.end()
           } else {
+            console.log("Else")
             res.status(401).json(err)
             res.end()
           }

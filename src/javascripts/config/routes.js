@@ -26,7 +26,7 @@ function requireLogIn(req, res, next) {
     }
 }
 
-function getCurrentUser(req) {
+export function getCurrentUser(req) {
     if (req.cookies.token) {
         return jwt.decode(req.cookies.token, APP_SECRET)    
     } else {
@@ -55,9 +55,9 @@ export function configureRoutes(app) {
     // Travels API Endpoints
     router.get('/api/travels', allTravelsAPI)
     router.get('/api/travels/:id', oneTravelAPI)
-    router.post('/api/travels', createTravelAPI)
-    router.put('/api/travels/:id', updateTravelAPI)
-    router.delete('/api/travels/:id', deleteTravelAPI)
+    router.post('/api/travels', requireLogIn, createTravelAPI)
+    router.put('/api/travels/:id', requireLogIn, updateTravelAPI)
+    router.delete('/api/travels/:id', requireLogIn, deleteTravelAPI)
 
     // Users
     router.post('/api/users/register', registerUserAPI)

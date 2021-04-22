@@ -20,7 +20,7 @@ const validationSchema = yup.object({
 })
 
 export default function RegisterForm() {
-    let { handleSubmit, handleChange, values, errors, setFieldValie } = useFormik({
+    let { handleSubmit, handleChange, values, errors, setFieldValue } = useFormik({
         initialValues: {
             firstName: "",
             lastName: "",
@@ -59,42 +59,47 @@ export default function RegisterForm() {
     const history = useHistory()
 
     return (
-        <div className="registerForm">
-            <form onSubmit={ handleSubmit }>
-                <h1>Register</h1>
-                <div className="form-group">
-                    <label htmlFor="firstName" className="form-label">First Name</label>
-                    <input className="form-control" type="text" name="firstName" id="firstName" value={ values.firstName } onChange={ handleChange } />
-                    <VHelp message={ errors.firstName } />
+        <div className="container">
+            <div className="row">
+                <div className="registerForm">
+                    <form onSubmit={ handleSubmit }>
+                        <h2 className="text-center register-header">Register</h2>
+                        <hr className="hr-travel"/>
+                        <div className="form-group">
+                            <label htmlFor="firstName" className="form-label">First Name</label>
+                            <input className="form-control" type="text" name="firstName" id="firstName" value={ values.firstName } onChange={ handleChange } />
+                            <VHelp message={ errors.firstName } />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="lastName" className="form-label">Last Name</label>
+                            <input className="form-control" type="text" name="lastName" id="lastName" value={ values.lastName } onChange={ handleChange } />
+                            <VHelp message={ errors.lastName } />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email" className="form-label">Email</label>
+                            <input className="form-control" type="text" name="email" id="email" value={ values.email } onChange={ handleChange } />
+                            <VHelp message={ errors.email } />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="username" className="form-label">Username</label>
+                            <input className="form-control" type="text" name="username" id="username" value={ values.username } onChange={ handleChange } />
+                            <VHelp message={ errors.username } />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password" className="form-label">Password</label>
+                            <input className="form-control" type="password" name="password" id="password" value={ values.password } onChange={ handleChange } />
+                            <VHelp message={ errors.password } />
+                        </div>
+                        {/* Buttons */}
+                        <div className="form-group">
+                            <div className="control">
+                                <button className="btn btn-primary me-2 register-btn h4" type="submit">Register</button> 
+                                {/* <button className="btn btn-secondary" type="button" onClick={ () => ( document.location = '/travels')}>Cancel</button> */}
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="lastName" className="form-label">Last Name</label>
-                    <input className="form-control" type="text" name="lastName" id="lastName" value={ values.lastName } onChange={ handleChange } />
-                    <VHelp message={ errors.lastName } />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email" className="form-label">Email</label>
-                    <input className="form-control" type="text" name="email" id="email" value={ values.email } onChange={ handleChange } />
-                    <VHelp message={ errors.email } />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="username" className="form-label">Username</label>
-                    <input className="form-control" type="text" name="username" id="username" value={ values.username } onChange={ handleChange } />
-                    <VHelp message={ errors.username } />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input className="form-control" type="password" name="password" id="password" value={ values.password } onChange={ handleChange } />
-                    <VHelp message={ errors.password } />
-                </div>
-                {/* Buttons */}
-                <div className="form-group">
-                    <div className="control">
-                        <button className="btn btn-primary me-2" type="submit">Register</button> 
-                        <button className="btn btn-secondary" type="button" onClick={ () => ( document.location = '/travels')}>Cancel</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     )
 }

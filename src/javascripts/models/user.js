@@ -8,7 +8,7 @@ const Schema = mongoose.Schema
 let userSchema = new Schema({
     firstName: {
         type: String,
-        require: true,
+        required: true,
         trim: true
     },
     lastName: {

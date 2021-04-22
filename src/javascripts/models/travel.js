@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 let travelSchema = new Schema({
     country: String,
     continent: String,
+    poster: String,
     info: String,
     language: String,
     currency: String,
@@ -14,6 +15,8 @@ let travelSchema = new Schema({
     transportation: String,
     safety: String,
     visa: String,
+    added_at: Date,
+    updated_at: Date,
     created_by: { type: Schema.Types.ObjectId, ref: 'User' }    
 })
 

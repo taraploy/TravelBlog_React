@@ -54,6 +54,7 @@ export default function ContactForm() {
     const history = useHistory()
 
     return (
+        <div className="container">
         <div className="mb-4">
             <h2 className="font-weight-bold text-center my-4">Contact us</h2>
             <p className="text-center mx-auto mb-5">
@@ -92,12 +93,11 @@ export default function ContactForm() {
                         </div>                        
                         <div className="text-center text-md-left">
                             <div className="mb-3">
-                                <div className="">
-                                    <button className="btn btn-primary me-2" type="submit">Submit</button>
-                                    <button className="btn btn-secondary" type="button" onClick={ () => history.push('/travels') }>Cancel</button>
-                                </div>
+                                {/* <div className=""> */}
+                                    <button className="btn btn-secondary submitBtn me-2" type="submit">Submit</button>
+                                    <button className="btn btn-secondary cancelBtn" type="button" onClick={ () => history.push('/travels') }>Cancel</button>
+                                {/* </div> */}
                             </div>
-                            <div className="status"></div>    
                         </div>
                     </form>
                 </div>
@@ -105,24 +105,22 @@ export default function ContactForm() {
                     <ul className="list-unstyled mb-0">
                         <li>
                             <FaMapMarkerAlt />
-                            {/* <i className="fas fa-map-marker-alt fa-2x"></i> */}
                             <p>Salt Lake City, UT 84150, USA</p>
                         </li>
 
                         <li>
                             <FaPhone />
-                            {/* <i className="fas fa-phone mt-4 fa-2x"></i> */}
                             <p>801 123 4567</p>
                         </li>
 
                         <li>
                             <FiMail />
-                            {/* <i className="fas fa-envelope mt-4 fa-2x"></i> */}
                             <p>contact@aroundtheworld.com</p>
                         </li>
                     </ul>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

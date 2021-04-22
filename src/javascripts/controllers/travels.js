@@ -4,6 +4,7 @@ import { User } from '../models/user'
 
 export const allTravelsAPI = (req, res, next) => {
     Travel.find().select().exec( (err, travels) => {
+        console.log("allTravelsAPI")
         if (err) {
             res.json({ success: false, message: 'Query failed' })
             res.end()
@@ -33,9 +34,11 @@ export const createTravelAPI = (req, res, next) => {
     travel.created_by = new User(getCurrentUser(req))
     travel.save( err => {
         if (err) {
+            console.log('err if ' + err)
             res.json({ success: false, message: 'Travel creation failed'})
             res.end()
         } else {
+            console.log('else if travel')
             res.end()
         }
     })
@@ -61,7 +64,7 @@ export const updateTravelAPI = (req, res, next) => {
     })
 }
 
-export const deleteTravelAPI = (req, rest, next) => {
+export const deleteTravelAPI = (req, res, next) => {
     Travel.findOne({ _id: req.params.id }).select().exec( (err, project) => {
         if (err) {
             res.json({ success: false, message: 'Unable to delete'})

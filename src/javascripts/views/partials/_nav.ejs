@@ -1,25 +1,26 @@
 <ul class="navbar-nav">
-    <li class="nav-item">
-      <a href="/travels" class="nav-link active">Home</a>
-    </li>
-    <li class="nav-item">
-      <a href="/about" class="nav-link active">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="/contact" class="nav-link active">Contact us</a>
-    </li>
-  </ul>
-  <ul class="navbar-nav">
-    <% if (loggedIn) { %>
-        <li class="nav-item">
-          <a id="_log_user_out" class="user_auth_link nav-link active">Logout</a>
-        </li>
-    <% } else { %>
-        <li class="nav-item">
-          <a href="/login" class="user_auth_link nav-link active">Login</a>
-        </li>
-        <li class="nav-item">
-          <a href="/register" class="user_auth_link nav-link active">Register</a>
-        </li>
-    <% } %>
-  </ul>
+  <li class="nav-item">
+    <a href="/travels" class="nav-link active">
+      HOME</a>
+  </li>
+  <li class="nav-item">
+    <a href="/about" class="nav-link active">ABOUT</a>
+  </li>
+  <li class="nav-item">
+    <a href="/contact" class="nav-link active">CONTACT US</a>
+  </li>
+</ul>
+<ul class="navbar-nav">
+  <% if (loggedIn) { %>
+      <li class="nav-item">
+        <a id="_log_user_out" class="user_auth_link nav-link active">LOGOUT</a>
+      </li>
+  <% } else { %>
+      <li class="nav-item">
+        <a href="/login" class="user_auth_link nav-link active">LOGIN</a>
+      </li>
+      <li class="nav-item">
+        <a href="/register" class="user_auth_link nav-link active">REGISTER</a>
+      </li>
+  <% } %>
+</ul>
