@@ -10,6 +10,10 @@ export const contactPage = (req, res, next) => {
     res.render('layout', { content: 'contact', title: 'AROUND THE WORLD' })
 }
 
+export const newsPage = (req, res, next) => {
+    res.render('layout', { content: 'news', title: 'AROUND THE WORLD' })
+}
+
 export const loginPage = (req, res, next) => {
     res.render('layout', { content: 'login', title: 'AROUND THE WORLD' })
 }

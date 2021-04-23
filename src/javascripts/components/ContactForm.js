@@ -55,15 +55,21 @@ export default function ContactForm() {
 
     return (
         <div className="container">
-        <div className="mb-4">
-            <h2 className="font-weight-bold text-center my-4">Contact us</h2>
+        {/* <div className="mb-4"> */}
+            {/* <h2 className="font-weight-bold text-center my-4">Contact us</h2>
             <p className="text-center mx-auto mb-5">
                 Do you have any questions? Please do not hesitate to contact us directly. 
                 <br />
                 Our team will come back to you as soon as we can.
-            </p>          
-            <div className="row">
-                <div className="col-md-9 mb-md-0 mb-5">
+            </p>           */}
+            <div className="row ">
+                <div className="col-md-9 mb-md-0 mb-5 contact-form">
+                    <h2 className="font-weight-bold text-center my-4">Contact us</h2>
+                    <p className="text-center mx-auto mb-5">
+                        Do you have any questions? Please do not hesitate to contact us directly. 
+                        <br />
+                        Our team will come back to you as soon as we can.
+                    </p> 
                     <form id="contact-form" name="contact-form" onSubmit={ handleSubmit }>
                         <div className="row">
                             <div className="col-md-6">
@@ -92,16 +98,16 @@ export default function ContactForm() {
                             </div>
                         </div>                        
                         <div className="text-center text-md-left">
-                            <div className="mb-3">
+                            <div className="mb-3 text-center">
                                 {/* <div className=""> */}
                                     <button className="btn btn-secondary submitBtn me-2" type="submit">Submit</button>
-                                    <button className="btn btn-secondary cancelBtn" type="button" onClick={ () => history.push('/travels') }>Cancel</button>
+                                    {/* <button className="btn btn-secondary cancelBtn" type="button" onClick={ () => history.push('/travels') }>Cancel</button> */}
                                 {/* </div> */}
                             </div>
                         </div>
                     </form>
                 </div>
-                <div className="col-md-3 text-center">
+                <div className="col-md-3 text-center contact-info">
                     <ul className="list-unstyled mb-0">
                         <li>
                             <FaMapMarkerAlt />
@@ -120,7 +126,7 @@ export default function ContactForm() {
                     </ul>
                 </div>
             </div>
-        </div>
+        {/* </div> */}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import express from 'express'
 import jwt from 'jsonwebtoken'
-import { aboutPage, contactPage, indexPage, loginPage, registerPage } from '../controllers/index'
+import { aboutPage, contactPage, indexPage, loginPage, newsPage, registerPage } from '../controllers/index'
 import { allTravelsAPI, createTravelAPI, deleteTravelAPI, oneTravelAPI, updateTravelAPI } from '../controllers/travels'
 import { contactAPI } from '../controllers/contacts'
 import { registerUserAPI, logUserInAPI } from '../controllers/users'
@@ -44,6 +44,7 @@ export function configureRoutes(app) {
     router.get('/', indexPage)
     router.get('/about', aboutPage)
     router.get('/contact', contactPage)
+    router.get('/news', newsPage)
 
     router.get('/login', loginPage)
     router.get('/register', registerPage)
