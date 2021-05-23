@@ -1,3 +1,6 @@
+# A web application project for Full Stack JavaScript Development class
+
+
 # Starter Project
 A starter web project powered by webpack
 
