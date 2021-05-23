@@ -116,11 +116,13 @@ export default function ContactForm() {
 
                         <li>
                             <FaPhone />
+                            {/* Fake phone number */}
                             <p>801 123 4567</p>
                         </li>
 
                         <li>
                             <FiMail />
+                            {/* Fake email */}
                             <p>contact@aroundtheworld.com</p>
                         </li>
                     </ul>
